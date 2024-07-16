@@ -1,0 +1,56 @@
+$primary-color: #b61984;
+$text-color-white: #fff;
+$text-color-black: #000;
+$bg-color: #fff;
+
+//tạo ra các class margin với padding
+
+$list-size: 0rem,0.25rem,0.5rem,0.75rem,1rem,1.25rem,1.5rem,1.75rem,2rem,2.25rem,2.5rem,2.75rem,3rem;
+$i: 0;
+@each $size in $list-size {
+    // margin
+    .m-#{$i}{
+        margin: $size;
+    }
+    .mt-#{$i}{
+        margin-top: $size;
+    }
+    .mb-#{$i}{
+        margin-bottom: $size;
+    }
+    .ml-#{$i}{
+        margin-left: $size;
+    }
+    .mr-#{$i}{
+        margin-right: $size;
+    }
+    .mx-#{$i}{
+        margin:  $size auto;
+    }
+    .my-#{$i}{
+        margin:  auto $size;
+    }
+    // padding
+    .p-#{$i}{
+        padding: $size;
+    }
+    .pt-#{$i}{
+        padding-top: $size;
+    }
+    .pb-#{$i}{
+        padding-bottom: $size;
+    }
+    .pl-#{$i}{
+        padding-left: $size;
+    }
+    .pr-#{$i}{
+        padding-right: $size;
+    }
+    .px-#{$i}{
+        padding: auto $size;
+    }
+    .py-#{$i}{
+        padding: $size auto;
+    }
+    $i: $i + 1;
+}
